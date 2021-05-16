@@ -11,4 +11,11 @@ RUN npm install
 # Bundle app source
 COPY . /usr/src/app
 
-EXPOSE 8080
+# EXPOSE 8080
+
+#ENTRYPOINT ["/usr/src/app/config.json"]
+ENTRYPOINT ["npm","start"]
+
+#CMD ["npm","start"]
+
+EXPOSE 80
